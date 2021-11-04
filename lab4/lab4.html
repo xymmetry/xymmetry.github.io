@@ -47,11 +47,14 @@
 	<script>
 $(document).ready(function(){
 	//for the carousel
-	var linknum = Math.floor(Math.random() * 11);
+	var linknum = Math.floor(Math.random() * 4);
 	const links = ["/lab4/html/lastsupper.html", "/lab4/html/ermine.html", "/lab4/html/annunciation.html", "/lab4/html/monalisa.html"]
 	//hide carousel
 	$('.end').hide();
 	$("#carousel").load(links[linknum]);
+	setTimeout(function(){
+	linknum = Math.floor(Math.random() * 4);
+	$("#carousel").load(links[linknum]);});}, 2000);
     // Toggles display
 	$("#home").click(function(){
 		$('.end').hide();
