@@ -52,8 +52,6 @@ $(document).ready(function(){
 	$('.end').hide();
 	$("#carousel").load(links[linknum]);
 	
-	setInterval(changePic, 2000);
-
 	function changePic(){
 	linknum = Math.floor(Math.random() * 4); 
 	$("#carousel").load(links[linknum]);
@@ -70,6 +68,7 @@ $(document).ready(function(){
 		$('#carousel').hide();
 		$('.end').show();
     });
+	setInterval(changePic, 2000);
 });
 </script>
 </body>
