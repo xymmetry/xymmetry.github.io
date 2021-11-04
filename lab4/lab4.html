@@ -52,10 +52,13 @@ $(document).ready(function(){
 	//hide carousel
 	$('.end').hide();
 	$("#carousel").load(links[linknum]);
+	
 	setTimeout(function(){
 	linknum = Math.floor(Math.random() * 4);
-	$("#carousel").load(links[linknum]);});
+	$("#carousel").load(links[linknum]);}
 	, 2000);
+	
+	
     // Toggles display
 	$("#home").click(function(){
 		$('.end').hide();
