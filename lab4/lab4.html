@@ -53,7 +53,7 @@ $(document).ready(function(){
 	$('.end').hide();
 	$("#carousel").load(links[linknum]);
 	
-	setTimeout("function(){linknum = Math.floor(Math.random() * 4); $('#carousel').load(links[linknum]);}", 2000);
+	setTimeout(function(){linknum = Math.floor(Math.random() * 4); $("#carousel").load(links[linknum]);}, 2000);
 	
 	
     // Toggles display
