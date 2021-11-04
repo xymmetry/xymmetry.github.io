@@ -15,6 +15,7 @@ $(document).ready(function(){
 	const links = ["lab4/html/lastsupper.html", "lab4/html/ermine.html", "lab4/html/annunciation.html", "lab4/html/monalisa.html"]
 	//hide carousel
 	$('.end').hide();
+	$("#carousel").load(links[linknum]);
     // Toggles display
 	$("#home").click(function(){
 		$('.end').hide();
