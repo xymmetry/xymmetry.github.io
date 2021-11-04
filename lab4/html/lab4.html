@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CCPS530 Lab 4 by Marc David</title>
+<link type="text/css" rel="stylesheet" href="lab4css.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+	//for the carousel
+	var linknum = Math.floor(Math.random() * 11);
+	const links = ["lab4/html/lastsupper.html", "lab4/html/ermine.html", "lab4/html/annunciation.html", "lab4/html/monalisa.html"]
+	//hide carousel
+	$('.end').hide();
+    // Toggles display
+	$("#home").click(function(){
+		$('.end').hide();
+		$("#carousel").load(links[linknum]);
+    });
+    $("#ref").click(function(){
+	    $(".container").hide();
+		$('#carousel').hide();
+		$('.end').show();
+    });
+});
+</script>
+</head>
+<body>
+    <div class="p-3 bg-white">
+        <h1>Works by Leonardo da Vinci</h1>
+    </div>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: #FFFFFF;">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand" id="home">Mini Gallery</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+					<a class="nav-item nav-link" id="ref" href="#">Reference</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+	<div id="carousel" class="container-lg my-3">
+			</div>
+			
+	<p class="end"><strong>Source:</strong> Wikipedia contributors. (2021, October 6). <cite>List of works by Leonardo da Vinci.</cite> In Wikipedia, The Free Encyclopedia. Retrieved 06:21, October 22, 2021, from <a href="https://en.wikipedia.org/w/index.php?title=List_of_works_by_Leonardo_da_Vinci&oldid=1048572064">https://en.wikipedia.org/w/index.php?title=List_of_works_by_Leonardo_da_Vinci&oldid=1048572064</a></p>
+	<p class="end"><strong>Source:</strong> Wikipedia contributors. (2021, October 28). <cite>Lady with an Ermine.</cite> In Wikipedia, The Free Encyclopedia. Retrieved 06:55, November 4, 2021, from <a href="https://en.wikipedia.org/w/index.php?title=Lady_with_an_Ermine&oldid=1052264735">https://en.wikipedia.org/w/index.php?title=Lady_with_an_Ermine&oldid=1052264735</a></p>
+	<p class="end"><strong>Source:</strong> Wikipedia contributors. (2021, August 26). <cite>Annunciation (Leonardo).</cite> In Wikipedia, The Free Encyclopedia. Retrieved 06:58, November 4, 2021, from <a href="https://en.wikipedia.org/w/index.php?title=Annunciation_(Leonardo)&oldid=1040797898">https://en.wikipedia.org/w/index.php?title=Annunciation_(Leonardo)&oldid=1040797898</a></p>
+	<p class="end"><strong>Source:</strong> Wikipedia contributors. (2021, November 3). <cite>The Last Supper (Leonardo).</cite> In Wikipedia, The Free Encyclopedia. Retrieved 06:43, November 4, 2021, from <a href="https://en.wikipedia.org/w/index.php?title=The_Last_Supper_(Leonardo)&oldid=1053388488">https://en.wikipedia.org/w/index.php?title=The_Last_Supper_(Leonardo)&oldid=1053388488</a></p>
+	<p class="end"><strong>Source:</strong> Wikipedia contributors. (2021, October 7). <cite>Mona Lisa.</cite> In Wikipedia, The Free Encyclopedia. Retrieved 06:39, November 4, 2021, from <a href="https://en.wikipedia.org/w/index.php?title=Mona_Lisa&oldid=1048676893">https://en.wikipedia.org/w/index.php?title=Mona_Lisa&oldid=1048676893</a></p>
+	
+	    <footer>
+        <div class="row">
+            <div class="col-md-6">
+                <p class="source">Website by: Marc David</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
