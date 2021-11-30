@@ -10,7 +10,7 @@ const app = {
     let key = '9b05386a560251aef228a017ef0b541d';
     let lang = 'en';
     let units = 'metric';
-    let url = `http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${key}&units=${units}&lang=${lang}`;
+    let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${key}&units=${units}&lang=${lang}`;
     fetch(url)
       .then((resp) => {
         if (!resp.ok) throw new Error(resp.statusText);
@@ -32,7 +32,7 @@ const app = {
               <div class="card">
               <h5 class="card-title p-2">${dt.toDateString()}</h5>
                 <img
-                  src="http://openweathermap.org/img/wn/${
+                  src="https://openweathermap.org/img/wn/${
                     day.weather[0].icon
                   }@4x.png"
                   class="card-img-top"
