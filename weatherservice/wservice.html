@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CCPS530 Project - Weather Service by Marc David</title>
+<link type="text/css" rel="stylesheet" href="weather.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+	//hide carousel
+	$('.end').hide();
+    // Toggles display
+ 	$("#home").click(function(){
+		$('#carousel').show();
+		$('.end').hide();
+    }); 
+    $("#tokyo").click(function(){
+        document.getElementById('lat').value = '35.652832';
+        document.getElementById('long').value = '139.839478';
+    });
+    $("#toronto").click(function(){
+        document.getElementById('lat').value = '43.651070';
+        document.getElementById('long').value = '-79.347015';
+    });
+    $("#manhattan").click(function(){
+        document.getElementById('lat').value = '40.754932';
+        document.getElementById('long').value = '-73.984016';
+    });
+    $("#rio").click(function(){
+        document.getElementById('lat').value = '-22.970722';
+        document.getElementById('long').value = '-43.182365';
+    });
+    $("#montevideo").click(function(){
+        document.getElementById('lat').value = '-34.901112';
+        document.getElementById('long').value = '-56.164532';
+    });
+    $("#paris").click(function(){
+        document.getElementById('lat').value = '48.864716';
+        document.getElementById('long').value = '2.349014';
+    });
+    $("#berlin").click(function(){
+        document.getElementById('lat').value = '52.520008';
+        document.getElementById('long').value = '13.404954';
+    });
+    $("#rome").click(function(){
+        document.getElementById('lat').value = '41.902782';
+        document.getElementById('long').value = '12.496366';
+    });
+    $("#cairo").click(function(){
+        document.getElementById('lat').value = '31.233334';
+        document.getElementById('long').value = '30.033333';
+    });
+    $("#seoul").click(function(){
+        document.getElementById('lat').value = '37.532600';
+        document.getElementById('long').value = '127.024612';
+    });
+    $("#shanghai").click(function(){
+        document.getElementById('lat').value = '31.224361';
+        document.getElementById('long').value = '121.469170';
+    });
+
+});
+</script>
+</head>
+<body>
+    <div class="p-3 bg-white">
+        <h1>Weather Service</h1>
+    </div>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: #FFFFFF;">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand" id="weatherbt">Get Weather</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+					<a class="nav-item nav-link" id="toronto" href="#">Toronto</a>
+                </div>
+                <div class="navbar-nav">
+					<a class="nav-item nav-link" id="tokyo" href="#">Tokyo</a>
+                </div>
+                <div class="navbar-nav">
+					<a class="nav-item nav-link" id="manhattan" href="#">Manhattan</a>
+                </div>
+                <div class="navbar-nav">
+					<a class="nav-item nav-link" id="rio" href="#">Rio de Janeiro</a>
+                </div>
+                <div class="navbar-nav">
+					<a class="nav-item nav-link" id="montevideo" href="#">Monte Video</a>
+                </div>
+                <div class="navbar-nav">
+					<a class="nav-item nav-link" id="paris" href="#">Paris</a>
+                </div>
+                <div class="navbar-nav">
+					<a class="nav-item nav-link" id="berlin" href="#">Berlin</a>
+                </div>
+                <div class="navbar-nav">
+					<a class="nav-item nav-link" id="rome" href="#">Rome</a>
+                </div>
+                <div class="navbar-nav">
+					<a class="nav-item nav-link" id="cairo" href="#">Cairo</a>
+                </div>
+                <div class="navbar-nav">
+					<a class="nav-item nav-link" id="seoul" href="#">Seoul</a>
+                </div>
+                <div class="navbar-nav">
+					<a class="nav-item nav-link" id="shanghai" href="#">Shanghai</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div>
+        <header class="container">
+            <h4>Enter latitude and longitude:</h4>
+          </header>
+        <nav class="container">
+          <div class="row align-items-center py-2">
+            <div class="input-group col-sm">
+              <span class="input-group-text" id="basic-addon1">Lat</span>
+              <input
+                type="text"
+                class="form-control"
+                inputmode="numeric"
+                id="lat"
+                placeholder="latitude"
+                aria-label="latitude"
+                value="0"
+              />
+            </div>
+            <div class="input-group col-sm">
+              <span class="input-group-text" id="basic-addon1">Lon</span>
+              <input
+                type="text"
+                class="form-control"
+                inputmode="numeric"
+                id="long"
+                placeholder="longitude"
+                aria-label="longitude"
+                value="0"
+              />
+            </div>
+          </div>
+        </nav>
+        <main class="container">
+          <br>
+          <h2>3 Day Forecast</h2>
+          <!-- results for weather data -->
+          <div class="weather row gx-2">
+            <div class="col">
+              <div class="card" style="width: 30vw">
+                <h5 class="card-title p-2">Date</h5>
+                <img
+                  src="http://openweathermap.org/img/wn/10d@4x.png"
+                  class="card-img-top"
+                  alt="Weather description"
+                />
+                <div class="card-body">
+                  <h3 class="card-title">Weather Label</h3>
+                  <p class="card-text">High Temp Low Temp</p>
+                  <p class="card-text">High Feels like</p>
+                  <p class="card-text">Humidty</p>
+                  <p class="card-text">Precipitation</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+
+	    <footer>
+        <div class="row">
+            <div class="col-md-6">
+                <p class="source">Website by: Marc David</p>
+            </div>
+        </div>
+    </footer>
+    <script src="weatherapp.js" async=false></script>
+</body>
+</html>
