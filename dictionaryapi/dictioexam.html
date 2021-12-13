@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CCPS530 Exam - Dictionary Website by Marc David</title>
+<link type="text/css" rel="stylesheet" href="dm.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+	//hide carousel
+	$('.end').hide();
+    // Toggles display
+ 	$("#home").click(function(){
+		$('#carousel').show();
+		$('.end').hide();
+    }); 
+});
+</script>
+</head>
+<body>
+    <div class="p-3 bg-white">
+        <h1>Dictionary Card</h1>
+    </div>
+
+    <div>
+        <header class="container">
+            <h4>Enter your word:</h4>
+          </header>
+        <nav class="container">
+          <div class="row align-items-center py-2">
+            <div class="input-group col-sm">
+              <span class="input-group-text" id="basic-addon1">Word</span>
+              <input
+                type="text"
+                class="form-control"
+                inputmode="numeric"
+                id="lat"
+                placeholder="latitude"
+                aria-label="latitude"
+                value="0"
+              />
+            </div>
+			<div class="input-group col-sm">
+            <button id="defbtn" type="button" class="btn btn-primary mb-3">
+              Get Definition
+            </button>
+          </div>
+          </div>
+        </nav>
+        <main class="container">
+          <br>
+          <h2>Your word:</h2>
+          <!-- results for weather data -->
+          <div class="weather row gx-2">
+            <div class="col">
+              <div class="card" style="width: 30vw">
+                <h5 class="card-title p-2">Date</h5>
+                <img
+                  src="https://openweathermap.org/img/wn/10d@4x.png"
+                  class="card-img-top"
+                  alt="Weather description"
+                />
+                <div class="card-body">
+                  <h3 class="card-title">Weather Label</h3>
+                  <p class="card-text">Definition:</p>
+                  <p class="card-text">Ph</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+
+	    <footer>
+        <div class="row">
+            <div class="col-md-6">
+                <p class="source">Website by: Marc David</p>
+            </div>
+        </div>
+    </footer>
+    <script src="merriam.js" async=false></script>
+</body>
+</html>
