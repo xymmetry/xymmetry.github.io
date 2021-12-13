@@ -22,7 +22,11 @@ $(document).ready(function(){
 </head>
 <body>
     <div class="p-3 bg-white">
-        <h1>Dictionary Card</h1>
+        <h1>        <img
+          src="https://dictionaryapi.com/images/info/branding-guidelines/MWLogo_LightBG_120x120_2x.png"
+          class="logo"
+          alt="Merriam-Webster Logo"
+        /> Dictionary Card</h1>
     </div>
 
     <div>
@@ -36,11 +40,9 @@ $(document).ready(function(){
               <input
                 type="text"
                 class="form-control"
-                inputmode="numeric"
-                id="lat"
-                placeholder="latitude"
-                aria-label="latitude"
-                value="0"
+                inputmode="text"
+                id="deff"
+                value="burger"
               />
             </div>
 			<div class="input-group col-sm">
@@ -52,21 +54,18 @@ $(document).ready(function(){
         </nav>
         <main class="container">
           <br>
-          <h2>Your word:</h2>
           <!-- results for weather data -->
-          <div class="weather row gx-2">
+          <div class="definition row gx-2">
             <div class="col">
               <div class="card" style="width: 30vw">
-                <h5 class="card-title p-2">Date</h5>
+                <h5 class="card-title p-2">Word</h5>
                 <img
-                  src="https://openweathermap.org/img/wn/10d@4x.png"
+                  src="https://i.imgur.com/D1nM11A.png"
                   class="card-img-top"
-                  alt="Weather description"
+                  alt="No Image"
                 />
                 <div class="card-body">
-                  <h3 class="card-title">Weather Label</h3>
                   <p class="card-text">Definition:</p>
-                  <p class="card-text">Ph</p>
                 </div>
               </div>
             </div>
